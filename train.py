@@ -82,9 +82,9 @@ def train(model, dataset, n_epochs=20, learning_rate=1e-3, batch_size=16, n_step
 	train_acc_buffer = np.array(train_acc_buffer)
 	test_acc_buffer = np.array(test_acc_buffer)
 
-	np.savetxt(results_root + 'loss_%02d.txt' % n_steps)
-	np.savetxt(results_root + 'train_acc_%02d.txt' % n_steps)
-	np.savetxt(results_root + 'test_acc_%02d.txt' % n_steps)
+	np.savetxt(results_root + 'loss_%02d.txt' % n_steps, loss_buffer)
+	np.savetxt(results_root + 'train_acc_%02d.txt' % n_steps, train_acc_buffer)
+	np.savetxt(results_root + 'test_acc_%02d.txt' % n_steps, test_acc_buffer)
 
 if __name__ == "__main__":
 
